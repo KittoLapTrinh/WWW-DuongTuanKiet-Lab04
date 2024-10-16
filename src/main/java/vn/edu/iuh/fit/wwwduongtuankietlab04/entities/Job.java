@@ -2,25 +2,21 @@ package vn.edu.iuh.fit.wwwduongtuankietlab04.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-import vn.edu.iuh.fit.wwwduongtuankietlab04.enums.SkillType;
 
 import java.util.UUID;
-
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 @ToString
-public class Skill {
+
+public class Job {
     private UUID id;
     private String name;
-    private String description;
+    private String desc;
+    private Company company;
 
-
-    private SkillType type;
-
-
-    public Skill(UUID id) {
+    public Job(UUID id) {
         this.id = id;
     }
 }

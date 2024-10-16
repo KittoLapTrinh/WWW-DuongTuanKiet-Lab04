@@ -2,8 +2,10 @@ package vn.edu.iuh.fit.wwwduongtuankietlab04.enums;
 
 import lombok.Getter;
 
+import java.util.stream.Stream;
+
 @Getter
-public enum Skill {
+public enum SkillType {
     HARD(1),
     SOFT(2),
     TECHNICAL(3),
@@ -12,9 +14,15 @@ public enum Skill {
 
     private final int value;
 
-    Skill(int value) {
-        this.value = value;
+    SkillType(int i) {
+        this.value = i;
     }
 
-    
+    public static SkillType convert(int value){
+        return Stream.of(SkillType.values())
+                .filter(skill -> skill.value == value)
+                .findFirst().orElseThrow(IllegalAccessError::new);
+    }
+
+
 }
