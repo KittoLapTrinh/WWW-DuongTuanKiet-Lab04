@@ -9,6 +9,9 @@
 ### Database-diagram
 ![database-diagram](https://github.com/user-attachments/assets/eb7a1ce4-85ca-4616-b463-c4431d6e35d8)
 
+### Chức năng
+CRUD với các lớp bên 
+
 ### Mapper-Convert
 ```
 public class CompanyMapper implements RowMapper<Company> {
